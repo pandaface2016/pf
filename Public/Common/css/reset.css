@@ -1,0 +1,126 @@
+/**
+ * Cao Yu's Mobile-Reset Css v1.0
+ * caoyu03@baidu.com(261179233@qq.com)
+ */
+
+/*
+1.移动端采用无衬线字体
+2.定义默认字号为10px，方便使用rem进行换算, 例如：1.3rem = 13px;
+3.定义默认点击效果
+*/
+html {
+	font: 62.5%/1.5  \5b8b\4f53, tahoma, arial, 'Hiragino Sans GB', sans-serif;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
+}
+
+/*
+1.全局避免长英文溢出
+2.全局避免水平滚动条出现干扰页面布局
+3.全局设定当内容换行溢出时，给予视觉提示，同时不干扰页面正常布局
+*/
+body * {
+	word-break: break-word;
+}
+
+/*
+1.清除相关元素的默认外边距
+*/
+body, h1, h2, h3, h4, h5, h6, p, dl, dd, ol, ul, fieldset,
+figure, menu, blockquote, pre, hr, input {
+	margin: 0;
+}
+
+/*
+1.清除相关元素的默认内边距
+*/
+legend, menu, ol, ul, td, th {
+	padding: 0;
+}
+
+/*
+1.清除相关元素的默认列表样式
+*/
+ol, ul, menu {
+	list-style: none;
+}
+
+/*
+1.清除相关元素的默认字体风格，多数为斜体，由于斜体不适宜阅读，使用场景少，建议清除，
+并非所有斜体元素都被复位，例如<i></i>标签保留样式
+*/
+em, abbr, dfn, address, cite, var {
+	font-style: normal;
+}
+
+/*
+1.清除img的默认下边距
+*/
+img {
+	vertical-align: bottom;
+}
+
+/*
+1.清除a标签的默认下划线样式
+2.默认继承父元素color
+3.避免出现外轮廓样式，属兼容性处理
+*/
+a {
+	text-decoration: none;
+	color: inherit;
+}
+a:active,
+a:focus {
+  	outline: 0;
+}
+
+/*
+1.清除h标签默认字号
+2.清除h标签默认字粗
+*/
+h1, h2, h3, h4, h5, h6, strong {
+	font-size: 100%;
+	font-weight: normal;
+}
+
+/*
+1.清除table两大经典默认样式
+*/
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*
+1.将hr由默认的inset风格变更为solid风格
+*/
+hr {
+	border-style: solid;
+}
+
+/*
+1.由于之前全局设定了word-break：break-word;导致input内容超长之后换行了，所以此处进行复位
+*/
+input {
+	word-break: initial;
+}
+
+/* clear float */
+.clearfix {
+	_zoom: 1;
+}
+.clearfix:after {
+	clear: both;
+	content: ".";
+	display: block;
+	height: 0;
+	line-height: 0;
+	visibility: hidden;
+}
+
+/* 文字超长隐藏并加省略号 */
+.text-overflow {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+

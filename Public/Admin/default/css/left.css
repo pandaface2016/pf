@@ -1,0 +1,16 @@
+@charset "utf-8";
+html,body {
+	height: 100%;
+}
+
+.content {
+	height: 100%;
+	background-color: #fff;
+}
+.top {
+	padding-right: 15px;
+	height: 28px;
+	line-height: 28px;
+	background-image: url('../images/index/bg1.jpg');
+	text-align: right;
+}

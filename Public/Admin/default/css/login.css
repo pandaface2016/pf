@@ -1,0 +1,72 @@
+@charset "utf-8";
+body {
+	background-color: #A2D5F0;
+}
+.content {
+	width: 100%;
+	height: 600px;
+	/*background: url('/Public/Admin/images/login/bg_login.png') repeat-x;*/
+	background: url('../images/login/bg_login.png') repeat-x;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+
+.form-wrap {
+	width: 800px;
+	height: 496px;
+	position: absolute;
+	left: 50%;
+	margin-left: -400px;
+	background: url('../images/login/login_main.png') repeat-x;
+}
+.error {
+    height: 40px;
+    line-height: 40px;
+    left: 305px;
+    position: absolute;
+    top: 154px;
+    width: 430px;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 16px;
+    color: #f00;
+}
+.form {
+	height: 170px;
+    left: 340px;
+    position: absolute;
+    top: 220px;
+    width: 370px;
+}
+.key {
+	width: 100px;
+	color: #fff;
+	text-align: right;
+}
+.verify-img {
+	vertical-align: middle;
+	width: 90px;
+	height: 30px;
+	cursor: pointer;
+}
+.form .btn {
+	border: none;
+    border-radius: 5px;
+    color: #3E3E3E;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 30px;
+    text-align: center;
+    font-weight: bolder;
+    letter-spacing: 3px;
+    cursor: pointer;
+}
+
+.bottom {
+	width: 100%;
+	height: 104px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
