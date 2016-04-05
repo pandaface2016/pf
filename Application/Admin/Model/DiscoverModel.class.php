@@ -31,9 +31,9 @@ class DiscoverModel extends Model {
     }
 
     // 获取完整的列表数据,每条数据包含表情用户信息、表情图信息
-    function getFullList($search, $Page) {
+    function getFullList($search, $firstRow, $listRows) {
         $Model = new \Think\Model(); // 实例化一个model对象 没有对应任何数据表
-        $list = $Model->query("SELECT a.*,b.name as face_user_name FROM __DISCOVER__ as a LEFT JOIN __FACE_USER__ as b ON a.face_user_id = b.id WHERE `status` = 1 AND `content` LIKE '%$search%' ORDER BY id desc LIMIT $Page->firstRow, $Page->listRows ");
+        $list = $Model->query("SELECT a.*,b.name as face_user_name,b.avatar,b.signature FROM __DISCOVER__ as a LEFT JOIN __FACE_USER__ as b ON a.face_user_id = b.id WHERE `status` = 1 AND `content` LIKE '%$search%' ORDER BY id desc LIMIT $firstRow, $listRows ");
 
         // 获取表情图
         $FaceModel = D('Face');
@@ -41,7 +41,7 @@ class DiscoverModel extends Model {
             // var_dump($list[$i]);
             if (!empty($list[$i]['face_id'])) {
                 $faceMap['id'] = array('in', $list[$i]['face_id']);
-                $FaceList = $FaceModel->where($faceMap)->field('url')->select();
+                $FaceList = $FaceModel->where($faceMap)->field('url, gif')->select();
                 $list[$i]['face_list'] = $FaceList;
             }
         }

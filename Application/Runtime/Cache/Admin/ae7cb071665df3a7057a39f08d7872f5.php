@@ -38,7 +38,7 @@
             <tr>
                 <th>表情图：</th>
                 <td>
-                	<?php $__FOR_START_570169145__=0;$__FOR_END_570169145__=9;for($key=$__FOR_START_570169145__;$key < $__FOR_END_570169145__;$key+=1){ echo ($key+1); ?>:<input type="text" name="face[]" class="text-input w100" value="<?php echo ($data['face_list'][$key]["id"]); ?>"><img src="<?php echo ($data['face_list'][$key]["url"]); ?>" height="80"><?php } ?>
+                	<?php $__FOR_START_1683284812__=0;$__FOR_END_1683284812__=9;for($key=$__FOR_START_1683284812__;$key < $__FOR_END_1683284812__;$key+=1){ echo ($key+1); ?>:<input type="text" name="face[]" class="text-input w100" value="<?php echo ($data['face_list'][$key]["id"]); ?>"><img src="<?php echo ($data['face_list'][$key]["url"]); ?>" height="80"><?php } ?>
                 </td>
             </tr>
             <tr>

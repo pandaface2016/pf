@@ -19,7 +19,7 @@ class DiscoverController extends CommonController {
         $count = $Discover->where($map)->count();// 查询满足要求的总记录数
         $Page = new \Think\Page($count, C('PAGESIZE'));// 实例化分页类 传入总记录数和每页显示的记录数
         $pageshow = $Page->show();// 分页显示输出
-        $list = $Discover->getFullList($search, $Page);
+        $list = $Discover->getFullList($search, $Page->firstRow, $Page->listRows);
 
         $this->assign('search', $search);
         $this->assign('list', $list);
